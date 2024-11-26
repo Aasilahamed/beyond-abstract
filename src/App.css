@@ -1,0 +1,123 @@
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light {
+  --bg-color: #d7d7d7;
+  --text-color: #000000;
+  --sidebar-bg: #f4f4f4;
+  --button-bg: #007bff;
+  --button-text: #000000;
+  --button-hover: #0056b3;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --sidebar-bg: #1e1e1e;
+  --button-bg: #bb86fc;
+  --button-text: #000000;
+  --button-hover: #985eff;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.sidebar {
+  width: 25%;
+  background-color: var(--sidebar-bg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h1 {
+  margin: 0;
+}
+
+.sidebar button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar button:hover {
+  background-color: var(--button-hover);
+}
+
+.wallet-info {
+  margin-top: 20px;
+}
+
+.chat-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.chat-window {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.bot-message,
+.user-message {
+  margin: 5px 0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.bot-message {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  align-self: flex-start;
+}
+
+.user-message {
+  background-color: var(--sidebar-bg);
+  color: var(--text-color);
+  align-self: flex-end;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.chat-input button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: var(--button-hover);
+}
